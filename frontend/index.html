@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EventSphere | Premium Events</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- Animated Background -->
+<div class="background-blur"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">EventSphere</div>
+  <div class="nav-actions">
+    <button id="logoutBtn" class="btn hidden">Logout</button>
+  </div>
+</nav>
+
+<!-- AUTH SECTION -->
+<section id="authSection" class="center-section">
+  <div class="glass-card">
+    <h2 id="authTitle">Login</h2>
+
+    <input id="nameInput" class="hidden" placeholder="Full Name">
+    <input id="emailInput" placeholder="Email">
+    <input id="passwordInput" type="password" placeholder="Password">
+
+    <button id="authBtn" class="btn primary">Login</button>
+
+    <p id="toggleAuth">
+      Don't have an account? <span>Sign up</span>
+    </p>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="hidden">
+
+  <!-- CREATE EVENT -->
+  <div class="glass-card event-form">
+    <h2>Create / Edit Event</h2>
+
+    <input id="eventTitle" placeholder="Event Title">
+    <textarea id="eventDesc" placeholder="Event Description"></textarea>
+    <input id="eventSeats" type="number" placeholder="Total Seats">
+
+    <button id="saveEventBtn" class="btn primary">Save Event</button>
+  </div>
+
+  <!-- EVENTS LIST -->
+  <div class="events-container">
+    <h2>Available Events</h2>
+    <div id="eventsGrid" class="grid"></div>
+  </div>
+
+</section>
+
+<!-- Toast -->
+<div id="toast" class="toast hidden"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

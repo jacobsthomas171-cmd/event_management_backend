@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EventHub Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h2>EventHub</h2>
+  <div class="nav-actions">
+    <button onclick="toggleTheme()">🌙</button>
+    <span id="welcome"></span>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Admin Section -->
+  <section id="admin-section" class="card hidden">
+    <h3>Create Event</h3>
+    <div class="form-row">
+      <input id="event-title" placeholder="Event Title">
+      <input id="event-description" placeholder="Description">
+      <input id="event-image" placeholder="Image URL">
+      <input id="event-seats" type="number" placeholder="Total Seats">
+      <button class="primary-btn" onclick="createEvent()">Create</button>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section>
+    <h3>Available Events</h3>
+    <div id="event-list" class="event-grid"></div>
+  </section>
+
+  <!-- My Registrations -->
+  <section>
+    <h3>My Registrations</h3>
+    <div id="my-events" class="event-grid"></div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
